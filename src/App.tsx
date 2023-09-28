@@ -7,9 +7,9 @@ import ThemeThree from './pages/ThemeThree'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route element={<Layout />} >
-    <Route path='/' element={<ThemeOne />} />
-    <Route path='/themeTwo' element={<ThemeTwo />} />
-    <Route path='/themeThree' element={<ThemeThree />} />
+    <Route index element={<ThemeOne />} />
+    <Route path='themeTwo' element={<ThemeTwo />} />
+    <Route path='themeThree' element={<ThemeThree />} />
   </Route>
 ))
 

@@ -4,10 +4,13 @@ import Layout from './components/Layout'
 import ThemeOne from './pages/ThemeOne'
 import ThemeTwo from './pages/ThemeTwo'
 import ThemeThree from './pages/ThemeThree'
+import OrderDetails from './components/OrderDetails'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route element={<Layout />} >
-    <Route index element={<ThemeOne />} />
+    <Route path='' element={<ThemeOne />} >
+      <Route path=':orderId' element={<OrderDetails />} />
+    </Route>
     <Route path='themeTwo' element={<ThemeTwo />} />
     <Route path='themeThree' element={<ThemeThree />} />
   </Route>

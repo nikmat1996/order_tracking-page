@@ -1,7 +1,7 @@
 
 const ThemeTwo = () => {
   return (
-    <div>ThemeTwo</div>
+    <div className="themePage">ThemeTwo</div>
   )
 }
 

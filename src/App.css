@@ -1,3 +1,7 @@
+.flex {
+  display: flex;
+}
+
 .navbar{
   background-color: black;
   
@@ -36,6 +40,7 @@
 
 .themePage {
   width: min(1200px, 100%);
+  box-sizing: border-box;
   margin-inline: auto;
   padding: 32px 16px;
 }
@@ -46,10 +51,11 @@
 }
 
 .t1Upsell {
-
+  margin-block: 4rem;
 }
 
 .t1Upsell > h2 {
+  padding-block: 1rem;
   text-align: center;
   margin: 0.83rem;
 }
@@ -65,7 +71,7 @@
   width: 25%;
   flex-shrink: 0;
   transition: all 0.3s;
-  padding-inline-end: 1%;
+  padding-inline-end: 14px;
 }
 
 .UpsellCard > div{
@@ -80,9 +86,219 @@
 .UpsellCard img {
   max-width: 262px;
   max-height: 262px;
+  transition: transform 0.3s;
 }
 
 .UpsellCard img:hover {
   transform: scale(1.1);
-  transition: all 0.3s;
+  transition: transform 0.5s;
 }
+
+
+
+
+
+
+
+
+.trackingSection {
+  margin-block-end: 4rem;
+}
+
+.trackingSection > h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.trackingSection > div {
+  display: flex;
+  border: 3px solid grey;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.trackingSection > div > div{
+  padding: 1rem;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trackingSection__input--wrap > h2 {
+  text-align: center;
+}
+
+.trackingSection__input--wrap > * {
+  width: min(400px, 100%);
+}
+
+.trackingSection__input--wrap > input{
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+}
+
+.trackingSection__input--wrap > button {
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  margin-block-end: 3rem;
+}
+
+.trackingSection_or {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content !important;
+  height: 80%;
+}
+
+.trackingSection_or > div {
+  height: 45%;
+  width: 2px;
+  background-color: grey;
+} 
+
+.trackingSection a {
+  text-decoration: none;
+  color: white;
+}
+
+.trackingSection a:hover {
+  text-decoration: underline;
+}
+
+.recentOrders_active {
+  color: green !important;
+}
+
+
+
+
+
+
+
+.invalidMessage {
+  color: red;
+  text-align: center;
+}
+
+.orderDetails_heading {
+  text-align: center;
+  font-size: 35px;
+}
+
+.orderDetails_heading2 {
+  text-transform: capitalize;
+}
+
+.orderDetails_barWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  padding-block-end: 4rem;
+}
+
+.round {
+  aspect-ratio: 1;
+  width: 50px;
+  border-radius: 50%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.round::after {
+  position: absolute;
+  top: 125%;
+  width: max-content;
+}
+
+.rod {
+  height: 5px;
+  flex-grow: 1;
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.reached {
+  background-color: green;
+}
+.roundOne::after {
+  content: "Ordered";
+}
+
+.roundTwo::after {
+  content: "Order Ready";
+}
+
+.roundThree::after {
+  content: "In Transit";
+}
+
+.roundFour::after {
+  content: "Out for Delivery";
+}
+
+.roundFive::after {
+  content: "Delivered";
+}
+
+.orderDetails_messageWrap {
+  padding: 1rem;
+  padding-inline-start: 0;
+  width: 50%;
+}
+
+.orderDetails_messageWrap > h2 {
+  margin-block: 1rem;
+}
+
+.message_container {
+  background-color: #2d2d2d;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+
+.eachMessage {
+  padding: 0.25rem;
+}
+
+.eachMessage > span {
+  background-color: #1b1a1a;
+  padding: 0.25rem;
+  margin-inline-end: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.orderDetails_packageWrap {
+  padding: 1rem;
+  padding-inline-end: 0;
+  width: 50%;
+}
+
+.packageWrap {
+  margin-block: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+.packageWrap > img {
+  aspect-ratio: 1;
+  width: 13%;
+}
+.packageWrap:not(:last-of-type)::after{
+  content: "";
+  width: 75%;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 12.5%;
+  height: 1px;
+  background-color: grey;
+}
+

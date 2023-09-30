@@ -1,4 +1,4 @@
-import { NavLink, Outlet, redirect, useNavigate, useOutletContext } from "react-router-dom";
+import { NavLink, Outlet, useNavigate, useOutletContext } from "react-router-dom";
 import ThemeOneUpsell from "../components/ThemeOneUpsell";
 import OrComponent from "../components/OrComponent";
 import { useState } from "react";
